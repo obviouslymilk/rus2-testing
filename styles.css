@@ -3,15 +3,127 @@
 * {
     padding: 0;
     margin: 0;
-    font-family: 'Gotham Pro Regular', sans-serif;
+    font-family: \'Gotham Pro Regular\', sans-serif;
 }
 
 body {
-    background: rgba(40,37,51,1);
+    background: #171422;
+}
+
+main {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 60px;
 }
 
 nav {
     background: linear-gradient(90.09deg, #9E0B37 0.98%, #FFC531 72.22%, #9E0B37 99.95%);
+}
+
+.post {
+    position: relative;
+    width: 220px;
+    height: 220px;
+    background-position: center;
+    background-size: cover;
+    border-radius: 14px;
+}
+
+.post-button {
+    position: relative;
+    width: 35px;
+    height: 35px;
+    right: 0;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(91.25deg, #DF5017 -4.25%, #F9CB74 108.11%);
+    box-shadow: 1.91304349899292px 1.91304349899292px 2.86956524848938px 0px #FFFFFF80 inset;
+box-shadow: 1.91304349899292px 1.91304349899292px 9.565217971801758px 0px #DF5017;
+    border: none;
+}.post-shadow {
+    position: absolute;
+    bottom: 0;
+    background: linear-gradient(180deg, rgba(23, 20, 34, 0) 0%, rgba(23, 20, 34, 0.9) 55.17%);
+    height: 50%;
+    width: 100%;
+}
+
+.post-title b {
+    font-weight: 700;
+    font-size: 12px;
+}
+
+.post-title {
+    position: absolute;
+    bottom: 10px;
+    margin: 0px 10px;
+    display: flex;
+    box-sizing: border-box;
+    align-items: center;
+    color: white;
+    border: 1px white solid;
+    padding: 5px 0px;
+    border-radius: 50vh;
+    text-align: center;
+    font-size: 9px;
+    height: 35px;
+    box-shadow: 1.91304349899292px 1.91304349899292px 9.565217971801758px 0px #FFFFFFCC;
+}
+
+#description-container {
+    display: flex;
+    gap: 16px;
+    width: min(1200px, 95%);
+    margin: 0 auto;
+}
+
+#hero {
+    height: 600px;
+}
+
+#hero-image {
+    display: block;
+    object-fit: cover;
+    height: 600px;
+    width: min(60vw, 100%);
+    margin-left: auto;
+}
+
+#hero-mask {
+    position: absolute;
+    background: rgb(223,80,23);
+    background: linear-gradient(123.33deg, #DF5017 4.42%, rgba(223, 80, 23, 0.440343) 12.08%, rgba(223, 80, 23, 0.19) 25.36%, rgba(223, 80, 23, 0) 42.74%),
+    linear-gradient(90.01deg, #282533 65.15%, #282533 65.15%, rgba(40, 37, 51, 0.739583) 82.21%, rgba(40, 37, 51, 0) 99.99%);    
+    height: 600px;
+    width: 70%;
+}
+
+
+#hero-slogan {
+    position: absolute; 
+    color: white;
+    font-size: 50px;
+    left: 20%; 
+    top: 30%;
+    right: 0;  
+    width: 820px; /* Need a specific value to work */
+}
+
+#highlighted {
+    background: linear-gradient(90.95deg, #FFA462 0%, #B45350 21.79%, #8A2645 48.93%, #291725 84.55%);
+    border-radius: 30px;
+    color: white;
+    padding: 40px 30px;
+    height: fit-content;
+}
+
+#login-container {
+    display: flex;
+    gap: 72px;
+    justify-content: space-around;
+    align-items: center;
 }
 
 #nav-container {
@@ -36,13 +148,6 @@ nav {
         border: none;
 }
 
-#login-container {
-    display: flex;
-    gap: 72px;
-    justify-content: space-around;
-    align-items: center;
-}
-
 #user-register {
     color: white;
     width: 160px;
@@ -55,33 +160,8 @@ nav {
     box-shadow: inset 4px 4px 6px #FFFFFF80, 4px 4px 20px #DF5017CC;
 }
 
-#hero {
-    height: 600px;
-}
-
-#hero-slogan {
-    position: absolute; 
-    color: white;
-    font-size: 50px;
-    left: 20%; 
-    top: 30%;
-    right: 0;  
-    width: 820px; /* Need a specific value to work */
-}
-
-#hero-image {
-    display: block;
-    object-fit: cover;
-    height: 600px;
-    width: min(60vw, 100%);
-    margin-left: auto;
-}
-
-#hero-mask {
-    position: absolute;
-    background: rgb(223,80,23);
-    background: linear-gradient(123.33deg, #DF5017 4.42%, rgba(223, 80, 23, 0.440343) 12.08%, rgba(223, 80, 23, 0.19) 25.36%, rgba(223, 80, 23, 0) 42.74%),
-    linear-gradient(90.01deg, #282533 65.15%, #282533 65.15%, rgba(40, 37, 51, 0.739583) 82.21%, rgba(40, 37, 51, 0) 99.99%);    
-    height: 600px;
-    width: 70%;
+#posts-container {
+    display: flex;
+    flex-flow: column wrap;
+    gap: 16px;
 }
