@@ -1,0 +1,59 @@
+@font-face {
+    font-family: 'Gotham Pro Light';
+    src: url('GothamPro-Light.eot');
+    src: url('GothamPro-Light.eot?#iefix') format('embedded-opentype'),
+    url('GothamPro-Light.woff') format('woff'),
+    url('GothamPro-Light.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    }
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+nav {
+    background: linear-gradient(90deg, rgba(158,11,55,1) 0%, rgba(255,197,49,1) 67%, rgba(158,11,55,1) 100%);
+}
+
+#nav-container {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 1rem;
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: center;
+    width: min(1200px, 95%);
+    padding: 15px 0;
+}
+
+#pagesref-container, #user-login {
+        display: flex;
+        align-items: center;
+        list-style: none;
+        gap: 72px;
+        color: white;
+        font-size: 1rem;
+        background: none;
+        border: none;
+}
+
+#login-container {
+    display: flex;
+    gap: 72px;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#user-register {
+    color: white;
+    width: 160px;
+    height: 49px;
+    font-size: 17px;
+    background: #9E0B37B3;
+    border: none;
+    border-radius: 40px;
+    box-shadow: inset 4px 4px 6px #FFFFFF80, 4px 4px 20px #DF5017CC;
+}
