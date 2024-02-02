@@ -1,21 +1,17 @@
-@font-face {
-    font-family: 'Gotham Pro Light';
-    src: url('GothamPro-Light.eot');
-    src: url('GothamPro-Light.eot?#iefix') format('embedded-opentype'),
-    url('GothamPro-Light.woff') format('woff'),
-    url('GothamPro-Light.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-    }
+@import url(https://db.onlinewebfonts.com/c/07a38bbad54db72a40b406bed1c72f53?family=Gotham+Pro+Regular);
 
 * {
     padding: 0;
     margin: 0;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: 'Gotham Pro Regular', sans-serif;
+}
+
+body {
+    background: rgba(40,37,51,1);
 }
 
 nav {
-    background: linear-gradient(90deg, rgba(158,11,55,1) 0%, rgba(255,197,49,1) 67%, rgba(158,11,55,1) 100%);
+    background: linear-gradient(90.09deg, #9E0B37 0.98%, #FFC531 72.22%, #9E0B37 99.95%);
 }
 
 #nav-container {
@@ -52,8 +48,40 @@ nav {
     width: 160px;
     height: 49px;
     font-size: 17px;
+    font-weight: bold;
     background: #9E0B37B3;
     border: none;
     border-radius: 40px;
     box-shadow: inset 4px 4px 6px #FFFFFF80, 4px 4px 20px #DF5017CC;
+}
+
+#hero {
+    height: 600px;
+}
+
+#hero-slogan {
+    position: absolute; 
+    color: white;
+    font-size: 50px;
+    left: 20%; 
+    top: 30%;
+    right: 0;  
+    width: 820px; /* Need a specific value to work */
+}
+
+#hero-image {
+    display: block;
+    object-fit: cover;
+    height: 600px;
+    width: min(60vw, 100%);
+    margin-left: auto;
+}
+
+#hero-mask {
+    position: absolute;
+    background: rgb(223,80,23);
+    background: linear-gradient(123.33deg, #DF5017 4.42%, rgba(223, 80, 23, 0.440343) 12.08%, rgba(223, 80, 23, 0.19) 25.36%, rgba(223, 80, 23, 0) 42.74%),
+    linear-gradient(90.01deg, #282533 65.15%, #282533 65.15%, rgba(40, 37, 51, 0.739583) 82.21%, rgba(40, 37, 51, 0) 99.99%);    
+    height: 600px;
+    width: 70%;
 }
