@@ -1,16 +1,15 @@
-@import url(https://db.onlinewebfonts.com/c/07a38bbad54db72a40b406bed1c72f53?family=Gotham+Pro+Regular);
-@import url(https://db.onlinewebfonts.com/c/013bc3f20021c3221eeb427f1f3929f4?family=GothamPro-Bold);
+@import url('./fonts/stylesheet.css');
+
 
 :root {
   --content-zone-width: 1400px;
-  --carousel-time: 200s;
+  --carousel-time: 250s;
 }
 
 * {
   padding: 0;
   margin: 0;
-  font-family: "Gotham Pro Regular";
-  font-weight: 300;
+  font-family: "Gotham Pro";
 }
 
 body {
@@ -75,11 +74,11 @@ a {
 }
 
 .post-title b {
-  font-weight: 700;
-  font-size: 12px;
+  font-size: 13.39px;
 }
 
 .post-title {
+  font-weight: 700;
   position: absolute;
   bottom: 10px;
   margin: 0px 10px;
@@ -98,6 +97,7 @@ a {
 }
 
 #description-container {
+  font-weight: 200;
   display: flex;
   gap: 16px;
   width: min(var(--content-zone-width), 95%);
@@ -110,9 +110,8 @@ a {
 
 #hero-image {
   display: block;
-  object-fit: cover;
+  object-fit: contain;
   height: 600px;
-  width: min(var(--content-zone-width), 100%);
   margin-left: auto;
 }
 
@@ -156,7 +155,7 @@ a {
     #291725 84.55%
   );
   border-radius: 30px;
-  font-weight: 400;
+  font-weight: 300px;
   font-weight: 22px;
   color: white;
   padding: 40px 30px;
@@ -223,7 +222,6 @@ a {
 
 .big-number {
   font-size: 183px;
-  font-family: "GothamPro-Bold";
   font-weight: 700;
   background: linear-gradient(
     172.77deg,
@@ -348,7 +346,7 @@ a {
 
 @keyframes slide-carousel-item-rev {
 	0% { transform: translateX(calc(-402.5px * 5))}
-	100% { transform: translateX(calc(402.5px * 5))}
+	100% { transform: translateX(calc(0))}
 }
 
 .carousel-wrap {
