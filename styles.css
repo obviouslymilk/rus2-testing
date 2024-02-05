@@ -1,5 +1,24 @@
 @import url('./fonts/stylesheet.css');
 
+@keyframes slide-carousel-item {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(calc(-402.5px * 5))
+  }
+}
+
+@keyframes slide-carousel-item-rev {
+  0% {
+    transform: translateX(calc(-402.5px * 5))
+  }
+
+  100% {
+    transform: translateX(calc(0))
+  }
+}
 
 :root {
   --content-zone-width: 1400px;
@@ -23,12 +42,15 @@ main {
 }
 
 nav {
-  background: linear-gradient(
-    90.09deg,
-    #9e0b37 0.98%,
-    #ffc531 72.22%,
-    #9e0b37 99.95%
-  );
+  background: linear-gradient(90.09deg,
+      #9e0b37 0.98%,
+      #ffc531 72.22%,
+      #9e0b37 99.95%);
+}
+
+
+footer {
+  height: 200px;
 }
 
 a {
@@ -55,20 +77,17 @@ a {
   align-items: center;
   justify-content: center;
   background: linear-gradient(91.25deg, #df5017 -4.25%, #f9cb74 108.11%);
-  box-shadow: 1.91304349899292px 1.91304349899292px 2.86956524848938px 0px
-    #ffffff80 inset;
-  box-shadow: 1.91304349899292px 1.91304349899292px 9.565217971801758px 0px
-    #df5017;
+  box-shadow: 1.91304349899292px 1.91304349899292px 2.86956524848938px 0px #ffffff80 inset;
+  box-shadow: 1.91304349899292px 1.91304349899292px 9.565217971801758px 0px #df5017;
   border: none;
 }
+
 .post-shadow {
   position: absolute;
   bottom: 0;
-  background: linear-gradient(
-    180deg,
-    rgba(23, 20, 34, 0) 0%,
-    rgba(23, 20, 34, 0.9) 55.17%
-  );
+  background: linear-gradient(180deg,
+      rgba(23, 20, 34, 0) 0%,
+      rgba(23, 20, 34, 0.9) 55.17%);
   height: 50%;
   width: 100%;
 }
@@ -92,8 +111,48 @@ a {
   text-align: center;
   font-size: 9px;
   height: 35px;
-  box-shadow: 1.91304349899292px 1.91304349899292px 9.565217971801758px 0px
-    #ffffffcc;
+  box-shadow: 1.91304349899292px 1.91304349899292px 9.565217971801758px 0px #ffffffcc;
+}
+
+
+.carousel {
+  overflow: hidden;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.carousel-wrap {
+  width: calc(402.5px * 10);
+  display: flex;
+  gap: 20px;
+  animation: slide-carousel-item var(--carousel-time) linear infinite;
+}
+
+.reverse {
+  animation: slide-carousel-item-rev var(--carousel-time) linear infinite;
+}
+
+.carousel-item {
+  width: 402.5px;
+  height: 280px;
+  border-radius: 20px;
+}
+
+.section-content {
+  color: white;
+}
+
+
+.grid-foot {
+  grid-column: 1/4;
+  justify-self: end;
+  font-size: 18px;
+}
+
+.description-section {
+  margin: 20px 0px;
+  color: white;
+  font-size: 22px;
 }
 
 #description-container {
@@ -118,20 +177,16 @@ a {
 #hero-mask {
   position: absolute;
   background: rgb(223, 80, 23);
-  background: linear-gradient(
-      123.33deg,
+  background: linear-gradient(123.33deg,
       #df5017 4.42%,
       rgba(223, 80, 23, 0.440343) 12.08%,
       rgba(223, 80, 23, 0.19) 25.36%,
-      rgba(223, 80, 23, 0) 42.74%
-    ),
-    linear-gradient(
-      90.01deg,
+      rgba(223, 80, 23, 0) 42.74%),
+    linear-gradient(90.01deg,
       #282533 65.15%,
       #282533 65.15%,
       rgba(40, 37, 51, 0.739583) 82.21%,
-      rgba(40, 37, 51, 0) 99.99%
-    );
+      rgba(40, 37, 51, 0) 99.99%);
   height: 600px;
   width: 70%;
 }
@@ -143,17 +198,16 @@ a {
   left: 20%;
   top: 30%;
   right: 0;
-  width: 820px; /* Need a specific value to work */
+  width: 820px;
+  /* Need a specific value to work */
 }
 
 #highlighted {
-  background: linear-gradient(
-    90.95deg,
-    #ffa462 0%,
-    #b45350 21.79%,
-    #8a2645 48.93%,
-    #291725 84.55%
-  );
+  background: linear-gradient(90.95deg,
+      #ffa462 0%,
+      #b45350 21.79%,
+      #8a2645 48.93%,
+      #291725 84.55%);
   border-radius: 30px;
   font-weight: 300px;
   font-weight: 22px;
@@ -223,21 +277,15 @@ a {
 .big-number {
   font-size: 183px;
   font-weight: 700;
-  background: linear-gradient(
-    172.77deg,
-    #8a2645 15.55%,
-    #291725 56.17%,
-    #171422 100.00%
-  );
+  background: linear-gradient(172.77deg,
+      #8a2645 15.55%,
+      #291725 56.17%,
+      #171422 100.00%);
   background-clip: text;
   color: rgba(0, 0, 0, 0);
   align-self: flex-start;
   width: 1em;
   line-height: 0.7em;
-}
-
-.section-content {
-  color: white;
 }
 
 #products-grid {
@@ -257,18 +305,6 @@ a {
   width: 90%;
   background-color: white;
   border-radius: 10px;
-}
-
-.grid-foot {
-  grid-column: 1/4;
-  justify-self: end;
-  font-size: 18px;
-}
-
-.description-section {
-  margin: 20px 0px;
-  color: white;
-  font-size: 22px;
 }
 
 #corel-errors {
@@ -331,41 +367,4 @@ a {
   display: flex;
   flex-flow: column nowrap;
   gap: 24px;
-}
-
-.carousel {
-  overflow: hidden;
-  width: 100%;
-  margin-top: 20px;
-}
-
-@keyframes slide-carousel-item {
-	0% { transform: translateX(0); }
-	100% { transform: translateX(calc(-402.5px * 5))}
-}
-
-@keyframes slide-carousel-item-rev {
-	0% { transform: translateX(calc(-402.5px * 5))}
-	100% { transform: translateX(calc(0))}
-}
-
-.carousel-wrap {
-  width: calc(402.5px * 10);
-  display: flex;
-  gap: 20px;
-  animation: slide-carousel-item var(--carousel-time) linear infinite;
-}
-
-.reverse {
-  animation: slide-carousel-item-rev var(--carousel-time) linear infinite;
-}
-
-.carousel-item {
-  width: 402.5px;
-  height: 280px;
-  border-radius: 20px;
-}
-
-footer {
-  height: 200px;
 }
