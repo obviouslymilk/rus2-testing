@@ -299,13 +299,27 @@ a {
   align-items: center;
 }
 
-#products-grid img {
-  object-fit: contain;
+.products-grid-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 90%;
   width: 90%;
   background-color: white;
   border-radius: 10px;
 }
+
+.products-grid-item img {
+  object-fit: contain;
+  width: 60%;
+  height: 60%;
+}
+
+.no-resize img {
+  width: 90%;
+  height: 90%;
+}
+
 
 #corel-errors {
   display: flex;
